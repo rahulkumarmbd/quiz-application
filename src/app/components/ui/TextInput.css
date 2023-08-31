@@ -9,6 +9,10 @@
   color: var(--label-color);
 }
 
+.label.error{
+  color: var(--error-red);
+}
+
 .textInput {
   width: 100%;
   padding: var(--padding-ui);
@@ -20,4 +24,20 @@
 
 .textInput::placeholder {
   color: var(--label-color);
+}
+
+.error.textInput::placeholder{
+  color: var(--error-red);
+}
+
+.textInput.error{
+  border: 1.5px solid var(--error-red);
+  color: var(--error-red);
+}
+
+.errorMessage{
+  color: var(--error-red);
+  min-height: 12px;
+  line-height: 12px;
+  font-size: 12px;
 }
