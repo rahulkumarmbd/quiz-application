@@ -1,3 +1,22 @@
+:root{
+  --border-radius-large: 10px;
+  --border-radius-medium: 6px;
+  --border-radius-small: 4px;
+
+  --font-size-large: 32px;
+  --font-size-medium: 24px;
+  --font-size-small: 16px;
+
+  --padding-large: 32px;
+  --padding-medium: 22px;
+  --padding-small: 18px;
+
+  /* colors */
+  --header-color: #FF6465;
+  --white-background-color: white;
+  --blue-background-color: #3686ff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +27,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--blue-background-color);
 }
 
 a {
