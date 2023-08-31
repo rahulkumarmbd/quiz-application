@@ -2,7 +2,7 @@
     width: 70%;
     margin: 50px auto;
     padding: var(--padding-medium);
-    background-color: var(--white-background-color);
+    background-color: var(--white-color);
     color: var(--header-color);
     border-radius: var(--border-radius-large);
     font-size: var(--font-size-large);
