@@ -1,13 +1,24 @@
 "use client";
 
+// hooks
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+// Components
 import SubTitle from "../common/SubTitle";
 import Title from "../common/Title";
 import Button from "../ui/Button";
 import TextInput from "../ui/TextInput";
+
+// Actions
+import { addCurrentUser } from "@/app/redux/slices/currentUserSlice";
+
+// lib
 import { currentUserSchema } from "./AuthValidation";
+import { validateHandler } from "@/app/lib/validateHandler";
+
+// css
 import "./Auth.css";
-import { validateHandler } from "@/app/lib/ValidateHandler";
 
 const FIRST_NAME = "firstName";
 const LAST_NAME = "lastName";
@@ -22,6 +33,7 @@ const initialState = {
 const Auth = () => {
   const [currentUser, setCurrentUser] = useState(initialState);
   const [errors,setErrors] = useState([]);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const {name , value} = e.target;
@@ -36,7 +48,7 @@ const Auth = () => {
         return;
       }
 
-      console.log(currentUser);
+      dispatch(addCurrentUser(currentUser));
   }
 
   const getErrorMessage = (field) => {
