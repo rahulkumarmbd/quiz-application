@@ -1,0 +1,23 @@
+.textInputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: var(--label-color);
+}
+
+.textInput {
+  width: 100%;
+  padding: var(--padding-ui);
+  border: 1.5px solid var(--text-input-border-color);
+  color: var(--text-input-color);
+  font-size: 1rem;
+  border-radius: var(--border-radius-medium);
+}
+
+.textInput::placeholder {
+  color: var(--label-color);
+}

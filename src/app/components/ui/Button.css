@@ -1,0 +1,20 @@
+.button {
+  width: 100%;
+  padding: var(--padding-ui) var(--padding-small);
+  border-radius: var(--border-radius-large);
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.button:active {
+  background-color: var(--dark-blue-color);
+}
+
+.button:disabled {
+  color: var(--white-blue-color);
+  background-color: var(--light-blue-color);
+}
