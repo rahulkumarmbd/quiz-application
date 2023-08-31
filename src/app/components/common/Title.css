@@ -1,0 +1,5 @@
+.title {
+  font-size: var(--font-size-small);
+  color: var(--black-color);
+  text-align: center;
+}
