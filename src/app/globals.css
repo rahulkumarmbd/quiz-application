@@ -1,20 +1,31 @@
-:root{
+:root {
   --border-radius-large: 10px;
   --border-radius-medium: 6px;
   --border-radius-small: 4px;
 
   --font-size-large: 32px;
   --font-size-medium: 24px;
-  --font-size-small: 16px;
+  --font-size-small: 18px;
 
   --padding-large: 32px;
   --padding-medium: 22px;
   --padding-small: 18px;
+  --padding-ui: 12px;
 
   /* colors */
-  --header-color: #FF6465;
-  --white-background-color: white;
-  --blue-background-color: #3686ff;
+  --header-color: #ff6465;
+  --black-color: #2d2d2d;
+  --white-color: white;
+  --white-blue-color: #b9c9df;
+  --gray-color: #555b6f;
+  --light-blue-color: #f5f9fe;
+  --blue-color: #3686ff;
+  --dark-blue-color: #165cc4;
+
+  /* text input colors */
+  --label-color: #a0a6b8;
+  --text-input-color: #555b6f;
+  --text-input-border-color: #b9c9df;
 }
 
 * {
@@ -27,7 +38,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--blue-background-color);
+  background-color: var(--blue-color);
 }
 
 a {
