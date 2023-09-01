@@ -6,7 +6,7 @@ const TableBody = ({ problems }) => {
         const score = selectedAnswer === correct_answer ? 1 : 0;
 
         return (
-          <tr>
+          <tr key={id}>
             <td>{id}</td>
             <td dangerouslySetInnerHTML={{ __html: question }}></td>
             <td
