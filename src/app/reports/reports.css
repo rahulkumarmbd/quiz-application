@@ -1,0 +1,79 @@
+.tableContainer {
+  border-radius: var(--border-radius-medium);
+  border: 1px solid #dfdede;
+  overflow: hidden;
+}
+
+.reportStatus {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  border-right: 1px solid #dfdede;
+}
+
+tr th:last-child,
+tr td:last-child {
+  border-right: none;
+}
+
+tr td:not(:nth-child(2)),
+tr th {
+  text-align: center;
+  white-space: nowrap;
+}
+
+td {
+  border-top: 1px solid #dfdede;
+}
+
+thead {
+  background-color: #e8edf2;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafbfa;
+}
+
+tbody tr:hover {
+  background-color: #f3f3f2;
+}
+
+.tableButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 12px;
+}
+
+.tableButtons > .button {
+  width: 140px;
+}
+
+.quizTitle {
+  padding: var(--padding-ui);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 18px;
+  border-radius: var(--border-radius-medium);
+  background-color: var(--white-color);
+}
+
+.notAuthenticated,
+.invalidRequest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
