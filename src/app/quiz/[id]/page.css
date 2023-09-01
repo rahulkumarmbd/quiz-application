@@ -34,3 +34,14 @@
     align-items: center;
     width: 100%;
 }
+
+.submitAllButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitAllButtonContainer > .submitAllButton{
+    width: 140px;
+    margin-top: 40px;
+}
