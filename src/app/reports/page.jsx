@@ -59,7 +59,7 @@ const Reports = () => {
   }
 
   if (email && !reportStatus.showReport) {
-    return <Title className="invalidRequest">Invalid Request</Title>;
+    return <Title className="invalidRequest">Please wait a sec...</Title>;
   }
 
   const totalScore = problems.reduce((acc, problem) => {

@@ -30,7 +30,7 @@ const Header = ({ children }) => {
 
   return (
     <div>
-      {email && problems.length && !showReport && (
+      {email && !!problems.length && !showReport && (
         <Timer initialMinutes={30} onOver={handleAutoSubmit} />
       )}
       <div className="header">{children}</div>

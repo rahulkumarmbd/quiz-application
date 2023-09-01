@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 // Components
 import Auth from "./components/cards/Auth";
+import Title from "./components/common/Title";
 
 // Css
 import "./css/page.css";
@@ -22,7 +23,7 @@ function Home() {
   }, [email]);
 
   if (email) {
-    return null;
+    return <Title className="invalidRequest">Please wait a sec...</Title>;
   }
 
   return (
