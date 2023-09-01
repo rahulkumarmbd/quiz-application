@@ -12,12 +12,13 @@
   color: var(--white-color);
 }
 
-.circularButtons > .button.visited:not(.currentButton):not(.selectedAnswer) {
+.circularButtons
+  > .button.visited:not(.currentButton):not(.selectedAnswer):not(:hover) {
   background-color: #ffabaf;
   color: var(--white-color);
 }
 
-.circularButtons > .button.selectedAnswer:not(.currentButton) {
+.circularButtons > .button.selectedAnswer:not(.currentButton):not(:hover) {
   background-color: #f19105;
   color: var(--white-color);
 }
