@@ -2,7 +2,7 @@
 
 // hooks
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 // Components
 import SubTitle from "../common/SubTitle";

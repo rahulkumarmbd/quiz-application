@@ -1,19 +1,32 @@
 "use client";
 
-import { useSelector } from "react-redux";
-import Auth from "./components/cards/Auth";
+// Hooks
+import { useEffect } from "react";
+import { shallowEqual, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
+
+// Components
+import Auth from "./components/cards/Auth";
 
 function Home() {
   const router = useRouter();
-  const { email } = useSelector((state) => state.currentUser);
+  const email = useSelector((state) => state.currentUser.email, shallowEqual);
 
-  if (email){
-    router.push("/quiz");
+  useEffect(() => {
+    if (email) {
+      router.push("/quiz/1");
+    }
+  }, [email]);
+
+  if (email) {
     return null;
   }
 
-  return <Auth />;
+  return (
+    <div className="authWrapper">
+      <Auth />
+    </div>
+  );
 }
 
 export default Home;

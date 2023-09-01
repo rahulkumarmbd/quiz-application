@@ -19,14 +19,19 @@
   --white-blue-color: #b9c9df;
   --gray-color: #555b6f;
   --light-blue-color: #f5f9fe;
+  --light-blue-2-color: #e5e9ee;
   --blue-color: #3686ff;
   --dark-blue-color: #165cc4;
   --error-red: #D9534F;
+  --success-color: #10B61A;
 
   /* text input colors */
   --label-color: #a0a6b8;
   --text-input-color: #555b6f;
   --text-input-border-color: #b9c9df;
+
+  /* box shadow */
+  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 * {
@@ -50,4 +55,12 @@ a {
 .appContainer{
   width: 80%;
   margin: auto;
+}
+
+.authWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }

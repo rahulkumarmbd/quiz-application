@@ -1,7 +1,5 @@
 .cardContainer{
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: calc(100vh - 260px);
     padding: var(--padding-small);
     background-color: var(--light-blue-color);
