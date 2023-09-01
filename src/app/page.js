@@ -8,6 +8,9 @@ import { useRouter } from "next/navigation";
 // Components
 import Auth from "./components/cards/Auth";
 
+// Css
+import './page.css';
+
 function Home() {
   const router = useRouter();
   const email = useSelector((state) => state.currentUser.email, shallowEqual);
