@@ -30,6 +30,13 @@ const problemsSlice = createSlice({
       );
       problem.isVisited = true;
     },
+    setSelectedAnswer: (state, action) => {
+      const problem = state.data.find(
+        (problem) => problem.id === action.payload.id
+      );
+
+      problem.selectedAnswer = action.payload.selectedOption;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -49,5 +56,5 @@ const problemsSlice = createSlice({
 
 export { fetchProblems };
 
-export const { markAsVisited } = problemsSlice.actions;
+export const { markAsVisited, setSelectedAnswer } = problemsSlice.actions;
 export default problemsSlice.reducer;
