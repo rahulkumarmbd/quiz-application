@@ -18,6 +18,10 @@ const ProblemNavigation = ({ id }) => {
       className += " currentButton";
     }
 
+    if(problem.selectedAnswer){
+      className += " selectedAnswer";
+    }
+
     return className;
   };
 
