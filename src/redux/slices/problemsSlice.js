@@ -37,6 +37,9 @@ const problemsSlice = createSlice({
 
       problem.selectedAnswer = action.payload.selectedOption;
     },
+    resetQuiz: () => {
+      return initialState;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -56,5 +59,6 @@ const problemsSlice = createSlice({
 
 export { fetchProblems };
 
-export const { markAsVisited, setSelectedAnswer } = problemsSlice.actions;
+export const { markAsVisited, setSelectedAnswer, resetQuiz } =
+  problemsSlice.actions;
 export default problemsSlice.reducer;

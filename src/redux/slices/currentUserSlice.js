@@ -16,7 +16,7 @@ const currentUserSlice = createSlice({
       state.lastName = lastName;
       state.email = email;
     },
-    removeCurrentUser: (state, action) => {
+    removeCurrentUser: () => {
       return initialState;
     },
   },
