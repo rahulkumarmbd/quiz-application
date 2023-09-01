@@ -24,6 +24,7 @@ const numberOfProblems = 15;
 const Quiz = ({ params }) => {
   const currentUser = useSelector((state) => state.currentUser, shallowEqual);
   const problems = useSelector((state) => state.problems, shallowEqual);
+  const reportStatus = useSelector((state) => state.reportStatus, shallowEqual);
 
   const dispatch = useDispatch();
   const router = useRouter();
@@ -40,7 +41,13 @@ const Quiz = ({ params }) => {
     }
   }, [currentUser.email]);
 
-  if (!currentUser.email) {
+  useEffect(() => {
+    if(reportStatus.showReport){
+      router.replace("/reports");
+    }
+  },[reportStatus.showReport]);
+
+  if (!currentUser.email || reportStatus.showReport) {
     return (
       <Title className="notAuthenticated">You are not authenticated...</Title>
     );
