@@ -8,6 +8,23 @@ const Timer = ({ initialMinutes , onOver }) => {
   const [seconds, setSeconds] = useState(0);
   const timerInterval = useRef();
 
+  // Load timer values from local storage if available
+  useEffect(() => {
+    const storedMinutes = parseInt(localStorage.getItem("timerMinutes"), 10);
+    const storedSeconds = parseInt(localStorage.getItem("timerSeconds"), 10);
+
+    if (!isNaN(storedMinutes) && !isNaN(storedSeconds)) {
+      setMinutes(storedMinutes);
+      setSeconds(storedSeconds);
+    }
+  }, []);
+
+  // Save timer values to local storage whenever they change
+  useEffect(() => {
+    localStorage.setItem("timerMinutes", minutes.toString());
+    localStorage.setItem("timerSeconds", seconds.toString());
+  }, [minutes, seconds]);
+
   useEffect(() => {
     if (minutes === 0 && seconds === 0) {
       clearInterval(timerInterval.current);
