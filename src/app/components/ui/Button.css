@@ -18,3 +18,26 @@
   color: var(--white-blue-color);
   background-color: var(--light-blue-color);
 }
+
+.button.circular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c5c4c5;
+  color: var(--black-color);
+  transition: all 0.3s;
+}
+
+.button.circular:hover {
+  background-color: #ABBCFE;
+  color: var(--white-color);
+}
+
+.button.circular:active {
+  background-color: #5673e8;
+  color: var(--white-color);
+}
