@@ -1,7 +1,8 @@
-.cardContainer{
-    display: flex;
-    height: calc(100vh - 260px);
-    padding: var(--padding-small);
-    background-color: var(--light-blue-color);
-    border-radius: var(--border-radius-large);
+.cardContainer {
+  display: flex;
+  padding: var(--padding-small);
+  background-color: var(--light-blue-color);
+  border-radius: var(--border-radius-large);
+  margin-bottom: 50px;
+  min-height: calc(100vh - 260px);
 }

@@ -1,5 +1,5 @@
 import { getClassName } from "@/app/lib/getClassName";
-import "./Button.css";
+import "./button.css";
 
 const Button = ({ disabled = false, className = "", variant = "", children, onClick }) => {
   if (!children) return null;

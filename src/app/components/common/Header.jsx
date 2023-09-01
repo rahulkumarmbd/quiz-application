@@ -8,6 +8,7 @@ import { updateReportStatus } from "@/redux/slices/reportSlice";
 
 const Header = ({ children }) => {
   const email = useSelector((state) => state.currentUser.email, shallowEqual);
+  const problems = useSelector((state) => state.problems.data);
   const showReport = useSelector(
     (state) => state.reportStatus.showReport,
     shallowEqual
@@ -22,7 +23,7 @@ const Header = ({ children }) => {
 
   return (
     <div>
-      {email && !showReport && (
+      {email && problems.length && !showReport && (
         <Timer initialMinutes={2} onOver={handleAutoSubmit} />
       )}
       <div className="header">{children}</div>

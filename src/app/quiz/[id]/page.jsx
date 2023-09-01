@@ -72,7 +72,10 @@ const Quiz = ({ params }) => {
 
   return (
     <div className="quizContainer">
-      <Title className="quizTitle">Quiz the Best, Win the Rest!</Title>
+      <Title className="quizTitle">
+        Hi! {currentUser.firstName} {currentUser.lastName}, Quiz the Best, Win
+        the Rest!
+      </Title>
       <div className="quizProblemWithNavigation">
         <Problem id={+params.id} />
         <ProblemNavigation id={+params.id} />
