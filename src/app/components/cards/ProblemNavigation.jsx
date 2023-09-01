@@ -1,33 +1,15 @@
+// Hooks
 import { useSelector } from "react-redux";
-import "./problemNavigation.css";
-import Button from "../ui/Button";
+
+// Components
 import Title from "../common/Title";
-import { useRouter } from "next/navigation";
+import NavigationButtonsGrid from "./NavigationButtonsGrid";
+
+// Css
+import "./problemNavigation.css";
 
 const ProblemNavigation = ({ id }) => {
   const problems = useSelector((state) => state.problems.data);
-  const router = useRouter();
-
-  const getCircularButtonClassName = (problem) => {
-    let className = "";
-    if (problem.isVisited) {
-      className += " visited";
-    }
-
-    if (id === problem.id) {
-      className += " currentButton";
-    }
-
-    if(problem.selectedAnswer){
-      className += " selectedAnswer";
-    }
-
-    return className;
-  };
-
-  const handleCircularButtonClick = (id) => {
-    router.push(String(id));
-  };
 
   const totalProblems = problems.length;
   return (
@@ -35,20 +17,7 @@ const ProblemNavigation = ({ id }) => {
       <Title>
         Question {id}/{totalProblems}
       </Title>
-      <div className="circularButtons">
-        {problems.map((problem) => {
-          return (
-            <Button
-                key={problem.id}
-              onClick={() => handleCircularButtonClick(problem.id)}
-              className={getCircularButtonClassName(problem)}
-              variant="circular"
-            >
-              {problem.id}
-            </Button>
-          );
-        })}
-      </div>
+      <NavigationButtonsGrid id={id} />
     </div>
   );
 };

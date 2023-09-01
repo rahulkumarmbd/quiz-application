@@ -1,0 +1,23 @@
+.circularButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.circularButtons > .button.currentButton {
+  background-color: #abbcfe;
+  color: var(--white-color);
+}
+
+.circularButtons > .button.visited:not(.currentButton):not(.selectedAnswer) {
+  background-color: #ffabaf;
+  color: var(--white-color);
+}
+
+.circularButtons > .button.selectedAnswer:not(.currentButton) {
+  background-color: #f19105;
+  color: var(--white-color);
+}
