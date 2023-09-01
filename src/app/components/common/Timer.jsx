@@ -28,6 +28,8 @@ const Timer = ({ initialMinutes , onOver }) => {
   useEffect(() => {
     if (minutes === 0 && seconds === 0) {
       clearInterval(timerInterval.current);
+      localStorage.clear("timerMinutes");
+      localStorage.clear("timerSeconds");
       onOver();
     } else {
       timerInterval.current = setInterval(() => {

@@ -37,13 +37,13 @@ const Quiz = ({ params }) => {
 
   useEffect(() => {
     if (!currentUser.email) {
-      router.replace("/");
+      router.push("/");
     }
   }, [currentUser.email]);
 
   useEffect(() => {
     if(reportStatus.showReport){
-      router.replace("/reports");
+      router.push("/reports");
     }
   },[reportStatus.showReport]);
 
@@ -73,8 +73,10 @@ const Quiz = ({ params }) => {
   }
 
   const handleSubmit = () => {
-    router.push("/reports");
+    localStorage.clear("timerMinutes");
+    localStorage.clear("timerSeconds");
     dispatch(updateReportStatus({ showReport: true, timeOver: false }));
+    router.push("/reports");
   };
 
   return (

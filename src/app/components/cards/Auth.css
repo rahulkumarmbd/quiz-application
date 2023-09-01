@@ -5,6 +5,7 @@
     background-color: var(--white-color);
     padding: var(--padding-small);
     border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
 }
 
 .auth-form{
