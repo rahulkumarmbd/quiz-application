@@ -46,3 +46,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.appContainer{
+  width: 80%;
+  margin: auto;
+}

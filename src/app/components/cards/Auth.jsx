@@ -11,7 +11,7 @@ import Button from "../ui/Button";
 import TextInput from "../ui/TextInput";
 
 // Actions
-import { addCurrentUser } from "@/app/redux/slices/currentUserSlice";
+import { addCurrentUser } from "@/redux/slices/currentUserSlice";
 
 // lib
 import { currentUserSchema } from "./AuthValidation";
