@@ -1,10 +1,11 @@
-import { shallowEqual, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import Option from "./Option";
 import Question from "./Question";
 import { getCurrentProblem } from "@/app/lib/getCurrentProblem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import './problem.css';
+import { markAsVisited } from "@/redux/slices/problemsSlice";
 
 const Problem = ({ id }) => {
   const problem = useSelector(
@@ -12,6 +13,13 @@ const Problem = ({ id }) => {
     shallowEqual
   );
   const [selectedOption, setSelectedOption] = useState(null);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if(problem && !problem.isVisited){
+      dispatch(markAsVisited(problem.id));
+    }
+  },[]);
 
   const handleSelectedOption = (selectedOption) => {
     setSelectedOption(selectedOption);
@@ -42,6 +50,7 @@ const Problem = ({ id }) => {
     return options.map((option) => {
       return (
         <Option
+          key={option}
           isSelected={selectedOption === option}
           onClick={() => handleSelectedOption(option)}
         >

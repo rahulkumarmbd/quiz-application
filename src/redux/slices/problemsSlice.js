@@ -9,6 +9,8 @@ const fetchProblems = createAsyncThunk("problems/fetch", async (amount) => {
   return response.data?.results.map((question, index) => ({
     ...question,
     id: index + 1,
+    selectedAnswer: null,
+    isVisited: false,
   }));
 });
 
@@ -21,7 +23,14 @@ const initialState = {
 const problemsSlice = createSlice({
   name: "problems",
   initialState,
-  reducers: {},
+  reducers: {
+    markAsVisited: (state, action) => {
+      const problem = state.data.find(
+        (problem) => problem.id === action.payload
+      );
+      problem.isVisited = true;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProblems.pending, (state) => {
@@ -40,4 +49,5 @@ const problemsSlice = createSlice({
 
 export { fetchProblems };
 
+export const { markAsVisited } = problemsSlice.actions;
 export default problemsSlice.reducer;
