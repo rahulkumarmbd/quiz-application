@@ -8,10 +8,11 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 // Components
 import Title from "../../components/common/Title";
 import Problem from "@/app/components/cards/Problem";
+import ProblemNavigation from "@/app/components/cards/ProblemNavigation";
 
 // Actions
 import { fetchProblems } from "@/redux/slices/problemsSlice";
-import Loading from "./loading";
+import Loading from "./Loading";
 import Error from "./error";
 
 import "./page.css";
@@ -26,7 +27,9 @@ const Quiz = ({ params }) => {
   const router = useRouter();
 
   useEffect(() => {
-    dispatch(fetchProblems(numberOfProblems));
+    if(!problems.data.length){
+      dispatch(fetchProblems(numberOfProblems));
+    }
   }, []);
 
   useEffect(() => {
@@ -36,7 +39,7 @@ const Quiz = ({ params }) => {
   }, [currentUser.email]);
 
   if (!currentUser.email) {
-    return <Title>You are not authenticated...</Title>;
+    return <Title className="notAuthenticated">You are not authenticated...</Title>;
   }
 
   if (
@@ -45,7 +48,7 @@ const Quiz = ({ params }) => {
     params.id <= 0 ||
     params.id > numberOfProblems
   ) {
-    return <Title>Invalid Question ID: {params.id}</Title>;
+    return <Title className="invalidId">Invalid Question ID: {params.id}</Title>;
   }
 
   if (problems.status === "loading" || problems.status === "idle") {
@@ -59,7 +62,10 @@ const Quiz = ({ params }) => {
   return (
     <div className="quizContainer">
       <Title className="quizTitle">Quiz the Best, Win the Rest!</Title>
-      <div>{params.id && <Problem id={+params.id} />}</div>
+      <div className="quizProblemWithNavigation">
+        <Problem id={+params.id} />
+        <ProblemNavigation id={+params.id} />
+      </div>
     </div>
   );
 };

@@ -13,3 +13,24 @@
     border-radius: var(--border-radius-medium);
     background-color: var(--white-color);
 }
+
+.quizProblemWithNavigation{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.quizProblemWithNavigation > div:first-child{
+    flex: 3;
+}
+
+.quizProblemWithNavigation > div:last-child{
+    flex: 1;
+}
+
+.notAuthenticated,.invalidId{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

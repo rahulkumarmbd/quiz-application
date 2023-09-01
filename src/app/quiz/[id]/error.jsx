@@ -1,7 +1,13 @@
 "use client";
 
+import "./error.css";
+
 const Error = () => {
-    return <div>Something went wrong</div>
-}
+  return (
+    <div className="errorContainer">
+      <span>Something went wrong</span>
+    </div>
+  );
+};
 
 export default Error;

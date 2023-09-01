@@ -1,5 +1,11 @@
+import './loading.css';
+
 const Loading = () => {
-    return <div>Problems loading....</div>
-}
+  return (
+    <div className="loadingProblems">
+      <span>Problems loading....</span>
+    </div>
+  );
+};
 
 export default Loading;
