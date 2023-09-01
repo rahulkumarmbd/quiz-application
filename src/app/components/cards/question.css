@@ -4,4 +4,5 @@
   border-radius: var(--border-radius-medium);
   background-color: var(--white-color);
   box-shadow: var(--box-shadow);
+  min-height: 100px;
 }

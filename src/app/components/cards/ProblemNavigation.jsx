@@ -14,8 +14,8 @@ const ProblemNavigation = ({ id }) => {
   const totalProblems = problems.length;
   return (
     <div className="problemNavigationContainer">
-      <Title>
-        Question {id}/{totalProblems}
+      <Title className="questionNumber">
+        Question: {id} / {totalProblems}
       </Title>
       <NavigationButtonsGrid id={id} />
     </div>
