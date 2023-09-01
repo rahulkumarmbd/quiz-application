@@ -1,0 +1,15 @@
+.quizContainer{
+    width: 100%;
+}
+
+.quizContainer > div{
+    width: 100%;
+}
+
+.quizTitle{
+    padding: var(--padding-ui);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 18px;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--white-color);
+}

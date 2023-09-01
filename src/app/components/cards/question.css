@@ -1,0 +1,7 @@
+.question {
+  border: 1.5px solid var(--blue-color);
+  padding: var(--padding-ui);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow);
+}
