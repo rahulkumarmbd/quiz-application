@@ -1,0 +1,18 @@
+.timer {
+  width: 160px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+  padding: var(--padding-ui);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--white-color);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.minutes,
+.seconds {
+  font-weight: bold;
+  color: #333;
+}
