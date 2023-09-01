@@ -8,17 +8,17 @@
 }
 
 .circularButtons > .button.currentButton {
-  background-color: #abbcfe;
+  background-color: var(--current-circular-button-color);
   color: var(--white-color);
 }
 
 .circularButtons
   > .button.visited:not(.currentButton):not(.selectedAnswer):not(:hover) {
-  background-color: #ffabaf;
+  background-color: var(--visited-circular-button-color);
   color: var(--white-color);
 }
 
 .circularButtons > .button.selectedAnswer:not(.currentButton):not(:hover) {
-  background-color: #f19105;
+  background-color: var(--selected-circular-button-color);
   color: var(--white-color);
 }

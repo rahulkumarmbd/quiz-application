@@ -1,3 +1,4 @@
+// Components
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 

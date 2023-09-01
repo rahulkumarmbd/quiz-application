@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import currentUserReducer from "./slices/currentUserSlice";
-import problemReducer from "./slices/problemsSlice";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
+
+// Reducers
+import currentUserReducer from "./slices/currentUserSlice";
+import problemReducer from "./slices/problemsSlice";
 import reportStatusReducer from "./slices/reportSlice";
 
 const persistConfig = {

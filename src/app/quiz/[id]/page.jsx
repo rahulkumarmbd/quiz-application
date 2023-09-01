@@ -9,16 +9,18 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import Title from "../../components/common/Title";
 import Problem from "@/app/components/cards/Problem";
 import ProblemNavigation from "@/app/components/cards/ProblemNavigation";
-
-// Actions
-import { fetchProblems } from "@/redux/slices/problemsSlice";
-import Loading from "./Loading";
-import Error from "./error";
-
-import "./page.css";
 import Button from "@/app/components/ui/Button";
+import Loading from "./QuizLoading";
+import Error from "./QuizError";
+
+// Slices
+import { fetchProblems } from "@/redux/slices/problemsSlice";
 import { updateReportStatus } from "@/redux/slices/reportSlice";
 
+// Css
+import "./css/page.css";
+
+// Constants
 const numberOfProblems = 15;
 
 const Quiz = ({ params }) => {
@@ -42,14 +44,14 @@ const Quiz = ({ params }) => {
   }, [currentUser.email]);
 
   useEffect(() => {
-    if(reportStatus.showReport){
+    if (reportStatus.showReport) {
       router.push("/reports");
     }
-  },[reportStatus.showReport]);
+  }, [reportStatus.showReport]);
 
   if (!currentUser.email || reportStatus.showReport) {
     return (
-      <Title className="notAuthenticated">You are not authenticated...</Title>
+      <Title className="notAuthenticated">Please wait a sec...</Title>
     );
   }
 

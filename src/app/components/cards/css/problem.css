@@ -27,11 +27,11 @@
   background-color: var(--light-blue-2-color);
 }
 
-.nextPrevButtons .button:disabled{
-    background-color: var(--light-blue-2-color);
+.nextPrevButtons .button:disabled {
+  background-color: var(--light-blue-2-color);
 }
 
-.problemContainer{
-    display: flex;
-    flex-direction: column;
+.problemContainer {
+  display: flex;
+  flex-direction: column;
 }

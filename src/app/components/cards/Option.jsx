@@ -1,4 +1,5 @@
-import "./option.css";
+// Css
+import "./css/option.css";
 
 const Option = ({ children, isSelected, onClick }) => {
   return (

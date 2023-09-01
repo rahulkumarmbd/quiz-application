@@ -1,0 +1,17 @@
+.option {
+  padding: var(--padding-ui);
+  box-shadow: var(--box-shadow);
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option:hover {
+  background-color: var(--light-blue-2-color);
+}
+
+.option.selected {
+  background-color: var(--success-color);
+  color: var(--white-color);
+}

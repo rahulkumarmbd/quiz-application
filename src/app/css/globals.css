@@ -22,8 +22,8 @@
   --light-blue-2-color: #e5e9ee;
   --blue-color: #3686ff;
   --dark-blue-color: #165cc4;
-  --error-red: #D9534F;
-  --success-color: #10B61A;
+  --error-red: #d9534f;
+  --success-color: #10b61a;
 
   /* text input colors */
   --label-color: #a0a6b8;
@@ -32,6 +32,20 @@
 
   /* box shadow */
   --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  /* circular button state colors */
+  --current-circular-button-color: #abbcfe;
+  --visited-circular-button-color: #ffabaf;
+  --selected-circular-button-color: #f19105;
+  --non-active-circular-button-color: #c5c4c5;
+  --active-circular-button-color: #5673e8;
+
+  /* table color */
+  --table-border-color: #dfdede;
+  --table-head-color: #e8edf2;
+  --odd-rows-colors: #ffffff;
+  --even-rows-colors: #fafbfa;
+  --table-rows-hover-color: #f3f3f2;
 }
 
 * {
@@ -52,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-.appContainer{
+.appContainer {
   width: 80%;
   margin: auto;
 }

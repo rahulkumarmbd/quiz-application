@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import Auth from "./components/cards/Auth";
 
 // Css
-import './page.css';
+import "./css/page.css";
 
 function Home() {
   const router = useRouter();

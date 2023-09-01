@@ -8,14 +8,14 @@ import Option from "./Option";
 import Question from "./Question";
 import Button from "../ui/Button";
 
-// Actions
+// Slices
 import { markAsVisited, setSelectedAnswer } from "@/redux/slices/problemsSlice";
 
 // libs
 import { getCurrentProblem } from "@/app/lib/getCurrentProblem";
 
 // Css
-import "./problem.css";
+import "./css/problem.css";
 
 const Problem = ({ id }) => {
   const problem = useSelector(

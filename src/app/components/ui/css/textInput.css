@@ -9,7 +9,7 @@
   color: var(--label-color);
 }
 
-.label.error{
+.label.error {
   color: var(--error-red);
 }
 
@@ -26,16 +26,16 @@
   color: var(--label-color);
 }
 
-.error.textInput::placeholder{
+.error.textInput::placeholder {
   color: var(--error-red);
 }
 
-.textInput.error{
+.textInput.error {
   border: 1.5px solid var(--error-red);
   color: var(--error-red);
 }
 
-.errorMessage{
+.errorMessage {
   color: var(--error-red);
   min-height: 12px;
   line-height: 12px;

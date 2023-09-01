@@ -1,9 +1,12 @@
-'use client';
+"use client";
 
+// Hooks
 import { useEffect, useRef, useState, memo } from "react";
-import './timer.css';
 
-const Timer = ({ initialMinutes , onOver }) => {
+// Css
+import "./css/timer.css";
+
+const Timer = ({ initialMinutes, onOver }) => {
   const [minutes, setMinutes] = useState(initialMinutes);
   const [seconds, setSeconds] = useState(0);
   const timerInterval = useRef();

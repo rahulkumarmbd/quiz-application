@@ -10,13 +10,13 @@ import Button from "../components/ui/Button";
 import Title from "../components/common/Title";
 import Table from "./Table";
 
-// Actions
+// Slices
 import { resetQuiz } from "@/redux/slices/problemsSlice";
 import { resetReportStatus } from "@/redux/slices/reportSlice";
 import { removeCurrentUser } from "@/redux/slices/currentUserSlice";
 
 // Css
-import "./reports.css";
+import "./css/reports.css";
 
 const Reports = () => {
   const problems = useSelector((state) => state.problems.data);
@@ -54,7 +54,7 @@ const Reports = () => {
 
   if (!email && !reportStatus.showReport) {
     return (
-      <Title className="notAuthenticated">You are not authenticated...</Title>
+      <Title className="notAuthenticated">Please wait a sec...</Title>
     );
   }
 
@@ -81,7 +81,7 @@ const Reports = () => {
         <Table problems={problems} />
       </div>
       <div className="tableButtons">
-        <Button onClick={handlePlayAgain}>Play Again</Button>
+        <Button onClick={handlePlayAgain}>Start Quiz Again</Button>
         <Button onClick={handleRedirectToHome}>Home</Button>
       </div>
     </div>

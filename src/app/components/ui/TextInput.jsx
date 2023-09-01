@@ -1,6 +1,11 @@
+// Hooks
 import { useId } from "react";
-import "./TextInput.css";
+
+// libs
 import { getClassName } from "@/app/lib/getClassName";
+
+// Css
+import "./css/textInput.css";
 
 const TextInput = (props) => {
   const {
@@ -18,7 +23,10 @@ const TextInput = (props) => {
   const renderLabelTag = () => {
     if (label) {
       return (
-        <label className={getClassName("label",labelClassName,errorMessage)} htmlFor={id}>
+        <label
+          className={getClassName("label", labelClassName, errorMessage)}
+          htmlFor={id}
+        >
           {label}
         </label>
       );
@@ -32,7 +40,7 @@ const TextInput = (props) => {
       <input
         id={id}
         placeholder={placeholder}
-        className={getClassName("textInput",className,errorMessage)}
+        className={getClassName("textInput", className, errorMessage)}
         type="text"
         autoComplete="off"
         name={name}

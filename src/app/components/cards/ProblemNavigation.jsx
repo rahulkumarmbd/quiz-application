@@ -6,7 +6,7 @@ import Title from "../common/Title";
 import NavigationButtonsGrid from "./NavigationButtonsGrid";
 
 // Css
-import "./problemNavigation.css";
+import "./css/problemNavigation.css";
 
 const ProblemNavigation = ({ id }) => {
   const problems = useSelector((state) => state.problems.data);

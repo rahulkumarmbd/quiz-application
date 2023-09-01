@@ -1,10 +1,17 @@
 "use client";
 
+// Hooks
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import "./Header.css";
-import Timer from "./Timer";
 import { useRouter } from "next/navigation";
+
+// Components
+import Timer from "./Timer";
+
+// Slices
 import { updateReportStatus } from "@/redux/slices/reportSlice";
+
+// Css
+import "./css/header.css";
 
 const Header = ({ children }) => {
   const email = useSelector((state) => state.currentUser.email, shallowEqual);
@@ -24,7 +31,7 @@ const Header = ({ children }) => {
   return (
     <div>
       {email && problems.length && !showReport && (
-        <Timer initialMinutes={2} onOver={handleAutoSubmit} />
+        <Timer initialMinutes={30} onOver={handleAutoSubmit} />
       )}
       <div className="header">{children}</div>
     </div>

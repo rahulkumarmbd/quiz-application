@@ -1,6 +1,6 @@
 .tableContainer {
   border-radius: var(--border-radius-medium);
-  border: 1px solid #dfdede;
+  border: 1px solid var(--table-border-color);
   overflow: hidden;
 }
 
@@ -16,7 +16,7 @@ table {
 th,
 td {
   padding: 8px;
-  border-right: 1px solid #dfdede;
+  border-right: 1px solid var(--table-border-color);
 }
 
 tr th:last-child,
@@ -31,23 +31,23 @@ tr th {
 }
 
 td {
-  border-top: 1px solid #dfdede;
+  border-top: 1px solid var(--table-border-color);
 }
 
 thead {
-  background-color: #e8edf2;
+  background-color: var(--table-head-color);
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: var(--odd-rows-colors);
 }
 
 tbody tr:nth-child(even) {
-  background-color: #fafbfa;
+  background-color: var(--even-rows-colors);
 }
 
 tbody tr:hover {
-  background-color: #f3f3f2;
+  background-color: var(--table-rows-hover-color);
 }
 
 .tableButtons {

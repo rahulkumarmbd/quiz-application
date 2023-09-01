@@ -1,4 +1,5 @@
-import "./SubTitle.css";
+// Css
+import "./css/subTitle.css";
 
 const SubTitle = ({ className, children }) => {
   if (!children) return null;

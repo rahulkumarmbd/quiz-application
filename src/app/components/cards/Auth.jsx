@@ -10,15 +10,15 @@ import Title from "../common/Title";
 import Button from "../ui/Button";
 import TextInput from "../ui/TextInput";
 
-// Actions
+// Slices
 import { addCurrentUser } from "@/redux/slices/currentUserSlice";
 
 // lib
-import { currentUserSchema } from "./AuthValidation";
+import { currentUserSchema } from "../../lib/AuthValidation";
 import { validateHandler } from "@/app/lib/validateHandler";
 
 // css
-import "./Auth.css";
+import "./css/auth.css";
 
 const FIRST_NAME = "firstName";
 const LAST_NAME = "lastName";
@@ -32,30 +32,30 @@ const initialState = {
 
 const Auth = () => {
   const [currentUser, setCurrentUser] = useState(initialState);
-  const [errors,setErrors] = useState([]);
+  const [errors, setErrors] = useState([]);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    const {name , value} = e.target;
-    setCurrentUser((prev) => ({...prev, [name] : value}));
-    if(errors) setErrors([])
+    const { name, value } = e.target;
+    setCurrentUser((prev) => ({ ...prev, [name]: value }));
+    if (errors) setErrors([]);
   };
 
   const handleSubmit = async () => {
-      const errors = await validateHandler(currentUserSchema,currentUser);
-      if(errors.length){
-        setErrors(errors);
-        return;
-      }
+    const errors = await validateHandler(currentUserSchema, currentUser);
+    if (errors.length) {
+      setErrors(errors);
+      return;
+    }
 
-      dispatch(addCurrentUser(currentUser));
-  }
+    dispatch(addCurrentUser(currentUser));
+  };
 
   const getErrorMessage = (field) => {
     const error = errors.find((error) => error.name === field);
-    if(error) return error.message;
+    if (error) return error.message;
     return null;
-  }
+  };
 
   return (
     <div className="authContainer">
@@ -90,7 +90,9 @@ const Auth = () => {
           onChange={handleChange}
           errorMessage={getErrorMessage(EMAIL)}
         />
-        <Button disabled={errors.length} onClick={handleSubmit}>Start Quiz</Button>
+        <Button disabled={errors.length} onClick={handleSubmit}>
+          Start Quiz
+        </Button>
       </div>
     </div>
   );

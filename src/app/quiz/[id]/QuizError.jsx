@@ -1,6 +1,7 @@
 "use client";
 
-import "./error.css";
+// Css
+import "./css/error.css";
 
 const Error = () => {
   return (

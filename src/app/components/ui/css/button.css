@@ -27,17 +27,17 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #c5c4c5;
+  background-color: var(--non-active-circular-button-color);
   color: var(--black-color);
   transition: all 0.3s;
 }
 
 .button.circular:hover {
-  background-color: #ABBCFE;
+  background-color: var(--current-circular-button-color);
   color: var(--white-color);
 }
 
 .button.circular:active {
-  background-color: #5673e8;
+  background-color: var(--active-circular-button-color);
   color: var(--white-color);
 }

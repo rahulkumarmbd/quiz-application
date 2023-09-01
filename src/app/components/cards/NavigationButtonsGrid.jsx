@@ -6,9 +6,9 @@ import { useRouter } from "next/navigation";
 import Button from "../ui/Button";
 
 // Css
-import "./navigationButtonsGrid.css";
+import "./css/navigationButtonsGrid.css";
 
-const NavigationButtonsGrid = ({id}) => {
+const NavigationButtonsGrid = ({ id }) => {
   const problems = useSelector((state) => state.problems.data);
   const router = useRouter();
 

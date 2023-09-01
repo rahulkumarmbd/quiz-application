@@ -1,4 +1,5 @@
-import "./Title.css";
+// Css
+import "./css/title.css";
 
 const Title = ({ className = "", children }) => {
   if (!children) return null;

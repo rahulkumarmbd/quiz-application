@@ -1,4 +1,5 @@
-import "./question.css";
+// Css
+import "./css/question.css";
 
 const Question = ({ id, children }) => {
   return (
