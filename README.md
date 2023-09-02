@@ -2,6 +2,8 @@
 Test your knowledge with this interactive quiz application! You have 30 minutes to answer 15 questions. After completing the quiz, you can check your score and analyze your attempts.
 
 ### Tech Stack: Next JS 13, React JS, and Redux Js
+Github repo link:- https://github.com/rahulkumarmbd/quiz-application
+Production deployment link:- https://quiz-application-nextjs.netlify.app/
 
 ## Home Screen
 Here users have to fill in details like first name, last name and email address to start the quiz
