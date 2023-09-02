@@ -54,12 +54,12 @@ const Reports = () => {
 
   if (!email && !reportStatus.showReport) {
     return (
-      <Title className="notAuthenticated">Please wait a sec...</Title>
+      <Title className="awaitRender">Please wait a sec...</Title>
     );
   }
 
   if (email && !reportStatus.showReport) {
-    return <Title className="invalidRequest">Please wait a sec...</Title>;
+    return <Title className="awaitRender">Please wait a sec...</Title>;
   }
 
   const totalScore = problems.reduce((acc, problem) => {

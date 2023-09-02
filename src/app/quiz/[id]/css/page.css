@@ -31,7 +31,7 @@
   flex: 1;
 }
 
-.notAuthenticated,
+.awaitRender,
 .invalidId {
   display: flex;
   justify-content: center;

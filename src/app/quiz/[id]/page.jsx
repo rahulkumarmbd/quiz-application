@@ -51,7 +51,7 @@ const Quiz = ({ params }) => {
 
   if (!currentUser.email || reportStatus.showReport) {
     return (
-      <Title className="notAuthenticated">Please wait a sec...</Title>
+      <Title className="awaitRender">Please wait a sec...</Title>
     );
   }
 

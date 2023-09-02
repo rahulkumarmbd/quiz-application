@@ -23,7 +23,7 @@ function Home() {
   }, [email]);
 
   if (email) {
-    return <Title className="notAuthenticated">Please wait a sec...</Title>;
+    return <Title className="awaitRender">Please wait a sec...</Title>;
   }
 
   return (
