@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quiz Application
+Test your knowledge with this interactive quiz application! You have 30 minutes to answer 15 questions. After completing the quiz, you can check your score and analyze your attempts.
 
-## Getting Started
+### Tech Stack: Next JS 13, React JS, and Redux Js
 
-First, run the development server:
+## Home Screen
+Here users have to fill in details like first name, last name and email address to start the quiz
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<img width="1436" alt="image" src="https://github.com/rahulkumarmbd/quiz-application/assets/87120020/e37f9fbf-9de9-4fa9-9f91-3a94fff340dc">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quiz Screen
+Here user can select one option for the given question. On the right side of the problem, you can go to any question corresponding to its number by clicking on it. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* Circular Buttons: Used to represent individual questions.
+* Pink Buttons: Indicate that a question has been visited but not answered.
+* Orange Buttons: Show that a question has been answered.
+* Grey Buttons: Indicate that a question hasn't been visited.
+* Blue Highlight: Shows the currently selected/question being viewed.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+In the top-right corner, there's a timer displaying the remaining time out of the allocated 30 minutes. Once the timer runs out or when the user chooses to click the 'Submit All' button, the application will gather all the attempted and unattempted answers. Afterwards, it will automatically redirect the user to the reports page, where they can review their performance and see the results of their quiz or questionnaire.
 
-## Learn More
+<img width="1440" alt="image" src="https://github.com/rahulkumarmbd/quiz-application/assets/87120020/63135dcf-0dc9-4daa-a117-b371e97bcc45">
 
-To learn more about Next.js, take a look at the following resources:
+## Report Screen
+In the table, you can track the number of questions you have attempted as well as those you have not attempted, along with their corresponding correct answers. Your score out of 15 is calculated based on this information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img width="1439" alt="image" src="https://github.com/rahulkumarmbd/quiz-application/assets/87120020/ecfa77e5-bb6f-44af-a328-27e6b31b7058">
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## How to set up this application in your local environment.
+Clone this GitHub repo in your local environment [Github Repo](https://github.com/rahulkumarmbd/quiz-application). After cloning run `npm i` to install the required npm packages and then run `npm run dev` to start the development server. Go to any browser and visit `http://localhost:3000` then you will be able to see the application in the working mode in your local environment.
 
-## Deploy on Vercel
+## Quiz Application - Project Approach
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Home Screen
+- **Objective**: Create a user authentication form where users enter their email addresses.
+- **Implementation**: 
+  - Designed a form on the home screen ("/" route) using Next.js.
+  - Built the form by creating Button and TextInput components.
+  - Authentication is handled by Auth.jsx component.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Quiz Screen
+- **Objective**: Display 15 questions on the quiz screen.
+- **Implementation**: 
+  - Fetched questions from the API provided in the document.
+  - Stored questions in Redux for reusability.
+  - Created Question.jsx for displaying each question's problem statement and Option.jsx for displaying answer options.
+  - Combined these components in Problem.jsx to show complete questions.
+  - Implemented a navigation panel to allow users to switch between questions.
+  - Designed circular buttons using NavigationButtonsGrid.jsx and ProblemNavigation.jsx.
+  - Used Redux to store properties like isVisited and selectedAnswer to track user interactions.
+  - Added features for navigating to the previous or next question and for submitting the quiz.
+  - Utilized dynamic URLs ("/quiz/1") to indicate the current question number.
+
+### Report Page
+- **Objective**: Show a table summarizing user performance in the quiz.
+- **Implementation**: 
+  - Gathered information from the quiz screen to create a table.
+  - Developed a Table.jsx component, including TableHead.jsx and TableBody.jsx components.
+  - Integrated this component into the reports route page.jsx to display the table on "/reports".
+  - The table provides details on attempted and unattempted questions, correctness, and the user's total score out of 15.
+
+
